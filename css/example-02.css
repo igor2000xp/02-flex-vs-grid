@@ -1,0 +1,31 @@
+/* FLEX */
+.flex {
+	display: flex;
+	gap: 10px 20px;
+
+	flex-wrap: wrap;
+
+	/* + Центрування */
+	/* justify-content: center; */
+	/* justify-content: space-between; */
+	/* justify-content: space-around; */
+}
+.flex__item {
+}
+/* GRID */
+.grid {
+	display: grid;
+	gap: 10px 20px;
+	grid-auto-flow: column;
+	justify-content: start;
+
+	/* + Центрування */
+	/* justify-content: center; */
+	/* justify-content: space-between; */
+	/* justify-content: space-around; */
+
+	/* Спроба зробити автоматичну перебудову конструкції */
+	/* grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); */
+}
+.grid__item {
+}

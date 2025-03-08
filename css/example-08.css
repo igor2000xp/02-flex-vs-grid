@@ -1,0 +1,51 @@
+/* FLEX */
+.flex {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+
+.flex__column {
+	flex-basis: 200px;
+	flex-grow: 1;
+	flex-shrink: 0;
+
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	justify-content: flex-start;
+}
+.flex__item--middle {
+	min-height: 120px;
+}
+.flex__item--big {
+	min-height: 170px;
+}
+.flex__item--mega {
+	min-height: 260px;
+}
+
+/* GRID */
+.grid {
+	display: grid;
+	gap: 20px;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+	/* Не підтримується, поки що */
+	/* grid-template-rows: masonry; */
+
+	/* Встановлюємо висоту рядка */
+	grid-auto-rows: 50px;
+}
+.grid__item {
+}
+
+.grid__item--middle {
+	grid-row: span 2;
+}
+.grid__item--big {
+	grid-row: span 3;
+}
+.grid__item--mega {
+	grid-row: span 4;
+}

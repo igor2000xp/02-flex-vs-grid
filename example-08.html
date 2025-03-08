@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/example-08.css">
+		<title>FLEX проти GRID. Конструкція виводу елементів у стилі "Masonry"</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="wrapper__container">
+				<h1 class="title">Конструкція виводу елементів у стилі "Masonry"</h1>
+				<section class="section">
+					<h2 class="section__title">FLEX</h2>
+					<div class="flex">
+						<div class="flex__column">
+							<div class="flex__item">один</div>
+							<span class="flex__item flex__item--middle">два</span>
+							<div class="flex__item flex__item--mega">три</div>
+						</div>
+						<div class="flex__column">
+							<div class="flex__item flex__item--big">чотири</div>
+							<div class="flex__item">п'ять</div>
+							<div class="flex__item flex__item--middle">шість</div>
+						</div>
+						<div class="flex__column">
+							<div class="flex__item flex__item--middle">сім</div>
+							<div class="flex__item">вісім</div>
+							<div class="flex__item flex__item--mega">дев'ять</div>
+							<div class="flex__item">десять</div>
+						</div>
+					</div>
+				</section>
+				<section class="section">
+					<h2 class="section__title">GRID</h2>
+					<div class="grid">
+						<div class="grid__item">один</div>
+						<span class="grid__item">два</span>
+						<div class="grid__item grid__item--middle">три</div>
+						<div class="grid__item grid__item--middle">чотири</div>
+						<div class="grid__item">п'ять</div>
+						<div class="grid__item grid__item--big">шість</div>
+						<div class="grid__item">сім</div>
+						<div class="grid__item grid__item--mega">вісім</div>
+						<div class="grid__item grid__item--big">дев'ять</div>
+						<div class="grid__item">десять</div>
+					</div>
+				</section>
+			</div>
+		</div>
+	</body>
+</html>

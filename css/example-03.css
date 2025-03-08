@@ -1,0 +1,55 @@
+/* FLEX */
+.flex {
+	/* display: flex; */
+	display: inline-flex;
+	gap: 10px;
+
+	background-color: rgb(255, 255, 255, 0.1);
+	padding: 10px;
+
+	/* + Центрування тільки якщо текста мало */
+	align-items: center;
+}
+
+.flex::before {
+	content: "";
+	background: url("../img/like.png") 0 0 / 100% no-repeat;
+
+	/* Керування розміром */
+	/* flex-basis: 40px; */
+	aspect-ratio: 1 / 1;
+
+	/* + Заборона зменьшуватись  */
+	flex-shrink: 0;
+
+	/* + Виправлення артифакту з текстом  */
+	width: 40px;
+
+	/* + Центрування тільки якщо текста мало */
+	align-self: flex-start;
+}
+
+/* GRID */
+.grid {
+	/* display: grid; */
+	display: inline-grid;
+	gap: 10px;
+
+	/* Конструкція та керування розміром */
+	grid-template-columns: 40px 1fr;
+
+	background-color: rgb(255, 255, 255, 0.1);
+	padding: 10px;
+
+	/* + Центрування тільки якщо текста мало */
+	align-items: center;
+}
+.grid::before {
+	content: "";
+	background: url("../img/like.png") 0 0 / 100% no-repeat;
+
+	aspect-ratio: 1 / 1;
+
+	/* + Центрування тільки якщо текста мало */
+	align-self: start;
+}

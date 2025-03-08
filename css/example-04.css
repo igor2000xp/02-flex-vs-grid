@@ -1,0 +1,48 @@
+/* FLEX */
+.flex {
+	display: flex;
+	gap: 10px 20px;
+}
+.flex__image {
+	/* Керування розміром */
+	/* flex-basis: 100px; */
+	/* 
+		У випадку, коли flex-елемент це зображення,
+		необхідно використовувати width / inline-size
+	*/
+	width: 120px;
+
+	/* Заборона розтягування забраження */
+	align-self: flex-start;
+}
+.flex__text {
+	flex-grow: 1;
+}
+
+/* GRID */
+.grid {
+	display: grid;
+	gap: 10px 20px;
+
+	/* Конструкція та керування розміром */
+	/* grid-template-columns: 120px 1fr; */
+
+	/* Спроба передбачити відсутність елементу */
+	/* grid-template-columns: auto 1fr; */
+}
+
+/* 
+	Будуємо конструкцію тільки 
+	за наявності елементу (:has)
+*/
+.grid:has(.grid__image) {
+	grid-template-columns: 120px 1fr;
+}
+
+.grid__image {
+	/* Адаптивний розмір для зображення */
+	max-width: 100%;
+
+	/* Керування розміром */
+	/* width: 120px; */
+}

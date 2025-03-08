@@ -1,0 +1,112 @@
+/* FLEX */
+.flex {
+	display: flex;
+	gap: 20px;
+	flex-wrap: wrap;
+}
+.flex__item {
+	/* Вказуємо розмір колонки */
+	/* (!) Проблема з gap */
+	/* flex-basis: 33.333%; */
+
+	/* Спроба підбору відсотків */
+	/* flex-basis: 31.6%; */
+
+	/* Можливість збільшуватись */
+	flex-grow: 1;
+
+	/* Мінімальна ширина колонки */
+	/* flex-basis: 200px; */
+	flex-shrink: 0;
+
+	/* Рішення для великих колонок (min) */
+	/* flex-basis: 300px; */
+	flex-basis: min(300px, 100%);
+
+	/* "Притиксання" елементу */
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+/* Спроба відтворення поведінки grid auto-fill */
+/*
+@media (min-width: 680px) {
+	.flex__item {
+		max-width: 31.6%;
+	}
+}
+	*/
+.flex__image {
+	width: 100%;
+	object-fit: cover;
+	aspect-ratio: 226 / 127;
+}
+.flex__text {
+	flex-grow: 1;
+}
+.flex__link {
+	color: yellow;
+}
+.flex__link:hover {
+	text-decoration: underline;
+}
+
+/* GRID */
+.grid {
+	display: grid;
+	gap: 20px;
+	/* Звичайна конструкція */
+	/* grid-template-columns: repeat(3, 1fr); */
+
+	/* "Автоматична" адаптація */
+	/* Чітка конструкція, незалежно від HTML-елементів */
+	/* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
+	/* Заповнення порожнього місця */
+	/* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+
+	/* Рішення для великих колонок (min) */
+	grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+
+	/* Однакова висота рядків */
+	/* grid-auto-rows: 1fr; */
+}
+
+/* 
+	Однакова висота рядків
+	Кращий варіант 
+*/
+@media (min-width: 460px) {
+	.grid {
+		grid-auto-rows: 1fr;
+	}
+}
+
+.grid__item {
+	/* "Притиксання" елементу */
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	gap: 10px;
+}
+/* 
+	"Притиксання" елементу
+	Побудова структури відповідно до наявності елемента 
+*/
+/*
+.grid__item:has(...){
+	...
+}
+*/
+.grid__image {
+	width: 100%;
+	object-fit: cover;
+	aspect-ratio: 226 / 127;
+}
+.grid__text {
+}
+.grid__link {
+	color: yellow;
+}
+.grid__link:hover {
+	text-decoration: underline;
+}
